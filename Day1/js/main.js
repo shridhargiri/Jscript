@@ -1,6 +1,8 @@
 /*---------Highest Number----------*/
 function highest()
 {
+    function highest_num()
+    {
     var a = document.getElementById("num1").value;
     var b = document.getElementById("num2").value;
     var c = document.getElementById("num3").value;
@@ -8,8 +10,11 @@ function highest()
     if(a>max){max = a;}
     if(b>max){max = b;}
     if(c>max){max = c;}
-    window.alert(max);
+    return max;
+    }
+    document.getElementById("maxele").innerHTML=highest_num();
 }
+
 /*---------Display name---------*/
 function nameInBrowser()
 {
