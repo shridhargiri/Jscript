@@ -1,0 +1,13 @@
+.contFont
+{
+    font-size: 16;
+}
+div{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #00cccc;
+    font-family: 'Courier New', Courier, monospace ;
+    box-shadow: 0 0 5px white, 0 0 25px white, 0 0 60px white, 0 0 100px white;
+}
