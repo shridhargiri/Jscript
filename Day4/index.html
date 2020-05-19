@@ -1,0 +1,32 @@
+<html>
+    <head><title>DAY4</title>
+        <script src="js/main.js"></script> 
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    <div>
+        <ul>
+            <h4>Format for form fields:</h4>
+            <li>All text fields are mandatory</li>
+            <li>User id must be minimum 3  and maximum 15 characters</li>
+            <li>Password must be minimum 8 characters</li>
+            <li>Mobile must be a 10 digit number</li>
+            <li>Age must be between 18 to 100</li>
+        </ul>
+        <center>
+        <fieldset>
+        <form name="regis" method="POST" onsubmit="val()">
+            <label id="uid">Username:</label><input id="usr" type="text" required></input><p id="ust"></p><br/>
+            <label id="uid">Password:</label><input id="pass" type="password" min="8" required></input><p id="passst"></p><br/>
+            <label id="uid">Mobile number:</label><input id="mob" type="text" required></input><p id="mst"></p><br/>
+            <label id="uid">Address:</label><input id="add"></input><p id="addst" required></p><br/>
+            <label id="uid">Age:</label><input id="age" type="number" min=18 max=100 required></input><p id="agest"></p><br/>
+            <button type="button" onclick="val()">Click here to validate your form</button>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="final"></p>
+    </fieldset>
+    </center>
+    </div>
+    </body>
+</html>
