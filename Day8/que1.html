@@ -1,0 +1,49 @@
+<html>
+    <head><title>Day8 test</title>
+    </head>
+    <body>
+        <p id="view1"></p>
+        <p id="view2"></p>
+        <script>
+        class employee{
+            constructor(id,nm,sal){
+                this.id = id;
+                this.name = nm;
+                this.salary = sal;
+                this.net_salary = 0;
+            }
+            get emp_sal() {
+                return this.salary;
+            }
+            set emp_sal(s) {
+                this.salary = s;
+            }
+            get emp_id() {
+                return this.id;
+            }
+            set emp_id(i) {
+                this.id = i;
+            }
+            get emp_name() {
+                return this.name;
+            }
+            set emp_name(nm) {
+                this.name = nm;
+            }
+            get net_sal(){
+                return this.net_salary;
+            }
+            calculate_net_sal(){
+                let tds = 0.1 * this.salary;
+                this.net_salary = this.salary - tds;
+                return this.net_salary;
+            }
+        };
+        var emp1 = new employee(1092,"Yash",55000);
+        var emp2 = new employee(2058,"Ram",78000);
+        emp2.emp_sal=120000;
+        document.getElementById("view1").innerHTML = "Employee ID: " + emp1.emp_id + " Name: "+ emp1.emp_name + " Salary: " + emp1.emp_sal + " Net Salary: "+emp1.calculate_net_sal();
+        document.getElementById("view2").innerHTML = "Employee ID: " + emp2.emp_id + " Name: "+ emp2.emp_name + " Salary: " + emp2.emp_sal + " Net Salary: "+emp2.calculate_net_sal();
+        </script>
+    </body>
+</html>

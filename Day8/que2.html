@@ -1,0 +1,64 @@
+<html>
+    <head><title>Day8 test</title>
+    </head>
+    <body>
+        <p id="view1"></p>
+        <p id="view1_result"></p>
+        <p id="view2"></p>
+        <p id="view2_result"></p>
+        <script>
+        class student{
+            constructor(rno,nm,m1,m2,m3)
+            {
+                this.rno = rno;
+                this.name = nm;
+                this.marks1 = m1;
+                this.marks2 = m2;
+                this.marks3 = m3;
+                this.tot_marks = 150;
+                this.perc = 0;
+                this.obt_marks = 0;
+            }
+            get stud_rollno(){ return this.rno; }
+
+            get stud_name(){ return this.name; }
+
+            get stud_marks1(){ return this.marks1; }
+
+            get stud_marks2(){ return this.marks2; }
+
+            get stud_marks3(){ return this.marks3; }
+
+            set stud_rollno(r){ this.rno = r; }
+
+            set stud_name(nm){ this.name = nm; }
+
+            set stud_marks1(m){ this.marks1 = m; }
+
+            set stud_marks2(m){ this.marks2 = m; }
+
+            set stud_marks3(m){ this.marks3 = m; }
+
+            set stud_total_marks(t){ this.tot_marks = t; }
+
+            marks_obtained(){
+                this.obt_marks = this.marks1 + this.marks2 + this.marks3;
+                return this.obt_marks;
+            }
+
+            percentage_of_marks()
+            {
+                this.perc = this.obt_marks / this.tot_marks * 100;
+                return this.perc;
+            }
+        };
+        var s1 = new student(36 , "Sam" , 25 , 35 , 40);
+        var s2 = new student(41 , "Mark" , 77 , 42 , 84);
+        s2.stud_total_marks = 300;
+        document.getElementById("view1").innerHTML= "Student 1 Info" + "<br/>" + "Roll number: " + s1.stud_rollno + "<br/>" + "Name: " + s1.stud_name + "<br/>" + "Subject1 marks: " + s1.stud_marks1 + "<br/>" + "Subject2 marks: "+ s1.stud_marks2  + "<br/>" + "Subject3 marks: " + s1.stud_marks3;
+        document.getElementById("view2").innerHTML= "Student 2 Info" + "<br/>" + "Roll number: " + s2.stud_rollno + "<br/>" + "Name: " + s2.stud_name + "<br/>" + "Subject1 marks: " + s2.stud_marks1 + "<br/>" + "Subject2 marks: "+ s2.stud_marks2  + "<br/>" + "Subject3 marks: " + s2.stud_marks3;
+        document.getElementById("view1_result").innerHTML = "Total marks obtained: " + s1.marks_obtained() + " Out of " + s1.tot_marks + "<br/>" + "Percentage of marks: " + s1.percentage_of_marks();
+        document.getElementById("view2_result").innerHTML = "Total marks obtained: " + s2.marks_obtained() + " Out of " + s2.tot_marks + "<br/>" + "Percentage of marks: " + s2.percentage_of_marks();
+        </script>
+    </body>
+</html>
