@@ -1,0 +1,16 @@
+<html>
+    <head><title>Day9 test__Q.1</title>
+    </head>
+    <body>
+        <p id="view1"></p>
+        <p id="view2"></p>
+        <script>
+            var name = (function() {
+                first = "Shridhar";
+                last = "Giri";
+                return this.first + " " + this.last;
+            })();
+            document.getElementById("view1").innerHTML = "Name: " + name;
+        </script>
+    </body>
+</html>

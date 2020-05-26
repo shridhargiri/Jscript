@@ -1,0 +1,19 @@
+<html>
+    <head><title>Day9 test__Q.3</title>
+    </head>
+    <body>
+        <p id="view1"></p>
+        <p id="view2"></p>
+        <script>
+            function sum() {
+                var s = 0;
+                for(let i=0 ; i < arguments.length ; i++) {
+                    s += arguments[i];
+                }
+                return s;
+            }
+            document.getElementById("view1").innerHTML = "1. Sum: " + sum(2,5,7,9);
+            document.getElementById("view2").innerHTML = "2. Sum: " + sum(21,5,14,10,15,20,44);
+        </script>
+    </body>
+</html>
