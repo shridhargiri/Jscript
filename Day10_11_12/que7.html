@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Questions 7</title>
+        <link rel="stylesheet" href="css/que4.css">
+    </head>
+    <body>
+        <h1>Question 7</h1>
+        <p>
+            This is a sample paragraph -1 
+        </p>
+        <p>
+            This is a sample paragraph -2
+        </p>
+        <p>
+            This is a sample paragraph -3
+        </p>
+        <button type="button" onclick="change()">Click to change!</button><br/>
+        Number of "p" tags: <span id="disp"></span>
+        <script>
+            function change(){
+                alert("In function");
+                var p = document.getElementsByTagName("p");
+                var cnt = p.length;
+                document.getElementById("disp").innerHTML = cnt;
+                for(let i = 0 ; i < p.length ; i++){
+                    p[i].style.backgroundColor = "blue";
+                }
+            }
+        </script>
+    </body>
+</html>
+        

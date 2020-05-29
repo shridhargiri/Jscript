@@ -1,0 +1,9 @@
+.heading{
+    color: rgb(112, 170, 18);
+    text-align: center;
+}
+.name{
+    color: red;
+    text-align: center;
+    font-size: larger;
+}

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Questions 4</title>
+        <link rel="stylesheet" href="css/que4.css">
+    </head>
+    <body>
+        <h1>Question 4</h1>
+        <input id="name"></input><br/>
+        <input name="colors" id="color1" type="radio">Red</button><br/>
+        <input name="colors" id="color2" type="radio">Orange</button><br/>
+        <input name="colors" id="color3" type="radio">Blue</button><br/>
+        <script>
+            document.getElementById("color1").addEventListener("change", color1);
+            document.getElementById("color2").addEventListener("change", color2);
+            document.getElementById("color3").addEventListener("change", color3);
+            function color1(){
+                var x = document.getElementById("name").style.color = "red";
+            }
+            function color2(){
+                document.getElementById("name").style.color = "orange";
+            }
+            function color3(){
+                document.getElementById("name").style.color = "blue";
+            }
+        </script>
+    </body>
+</html>

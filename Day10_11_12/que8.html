@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Questions 8</title>
+        <link rel="stylesheet" href="css/que4.css">
+    </head>
+    <body>
+        <ol id="nmlist">
+            <li>Ramesh</li>
+            <li>Suresh</li>
+            <li>Naresh</li>
+            <li>Yash</li>
+        </ol>
+        <button type="button" onclick="removestart()">Remove 1st name</button>
+        <script>
+            var list = document.getElementById("nmlist").childNodes;
+            function removestart(){
+                list[0].remove();
+            }
+        </script>
+    </body>
+</html> 
