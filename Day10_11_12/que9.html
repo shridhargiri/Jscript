@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Questions 9</title>
+        <link rel="stylesheet" href="css/que4.css">
+    </head>
+    <body>
+        <h1>Question 9</h1>
+        <h3>Enter data:</h3>
+        <input type="text" id="intxt" onchange="copyText()"></input>
+        <span id="outtxt"></span>
+        <script>
+            function copyText(){
+                var txt = document.getElementById("intxt").value;
+                document.getElementById("outtxt").innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

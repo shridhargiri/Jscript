@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Questions 11</title>
+        <link rel="stylesheet" href="css/que11.css">
+    </head>
+    <body>
+        <h1>Question 11</h1>
+        <h3>Enter password:</h3>
+        <h5>Password rules:</h5><br/>
+        <ul>
+            <li>It must have at least one capital character.</li>
+            <li>It must have at least one digit.</li>
+            <li>It must have at least 1 special symbol.</li>
+        </ul>
+        <input type="text" id="intxt" onchange="validatePass()"></input><br/>
+        <span>Errors in you password:</span>
+        <span class="output" id="outtxt"></span>
+        <script>
+            function validatePass(){
+                var caseFlag = 0;
+                var numFlag = 0;
+                var symFlag = 0;
+                var msg = "<br/>";
+                var txt = document.getElementById("intxt").value;
+                var patt1 = /[!-/]/g;
+                var patt2 = /[:-@]/g;
+                var patt3 = /[0-9]/g;
+                var patt4 = /[A-Z]/g;
+                if(txt.match(patt3)){msg = msg + ""; }
+                else{msg = msg + "<br/>" + "No numbers found!";}
+
+                if(txt.match(patt4)){msg = msg + ""; }
+                else{msg = msg + "<br/>" + "No capital letter found!";}
+
+                if(txt.match(patt2)){msg = msg + ""; }
+                else if(txt.match(patt1)){msg = msg + ""; }
+                else{msg = msg + "<br/>" + "No symbol found!";}
+
+                document.getElementById("outtxt").innerHTML = msg;
+            }
+        </script>
+    </body>
+</html>

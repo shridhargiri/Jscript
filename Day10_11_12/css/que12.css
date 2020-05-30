@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+
+}
+table{
+    border: darkblue;
+    text-align : center;
+    width: max-content;
+    height: max-content;
+}

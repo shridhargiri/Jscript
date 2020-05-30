@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Questions 12</title>
+        <link rel="stylesheet" href="css/que12.css">
+    </head>
+    <body>
+        <h1>Question 12</h1>
+        <table border="1" id="tab" align="center">
+            <tr bgcolor="orange">
+                <td>Sr. No.</td>
+                <td>Book name</td>
+                <td>Book price</td>
+                <td>Add to cart</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Work Ethics</td>
+                <td>Rs. 199</td>
+                <td><input name="books" type="checkbox" value="199" onchange="calc()"></input></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Do it Today</td>
+                <td>Rs. 99</td>
+                <td><input name="books" type="checkbox" value="99" onchange="calc()"></input></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Be a Human Calculator</td>
+                <td>Rs. 49</td>
+                <td><input name="books" type="checkbox" value="49" onchange="calc()"></input></td>
+            </tr>
+        </table>
+        <br/><br/><br/>
+        CART: <br/>
+        <table border="1" align="center">
+            <tr>
+                <th>Number of items added to cart:</th>
+                <td><span id="nitems">0</span></td>
+            </tr>
+            <tr>
+                <th>Total amount:</th>
+                <td>Rs.<span id="pitems">0</span></td>
+            </tr>
+        </table>
+        <script>
+            function calc(){
+                var total = 0;
+                var nitems = 0;
+                var amt = document.getElementsByName("books");
+               for(let i = 0 ; i < amt.length ; i++){
+                if(amt[i].checked){
+                    total = parseFloat(total);
+                    let x =  amt[i].value;
+                    x = parseFloat(x);
+                    total = total + x;
+                    nitems += 1;
+                }
+               }
+               document.getElementById("nitems").innerHTML = nitems;
+               document.getElementById("pitems").innerHTML = total;
+            }
+        </script>
+    </body>
+</html>

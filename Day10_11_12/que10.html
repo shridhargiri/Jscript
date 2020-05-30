@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Questions 9</title>
+        <link rel="stylesheet" href="css/que4.css">
+    </head>
+    <body>
+        <h1>Question 10</h1>
+        <h3>Enter data:</h3>
+        <h5>::Remember, the textbox should not be empty!</h5>
+        <input type="text" id="intxt" onchange="validate()"></input>
+        <span id="outtxt"></span>
+        <script>
+            function validate(){
+                var txt = document.getElementById("intxt").value;
+                if(txt == ""){
+                    document.getElementById("outtxt").innerHTML = "You cannot keep the text box empty!";
+                }
+                else{
+                    document.getElementById("outtxt").innerHTML = "";
+                }
+            }
+        </script>
+    </body>
+</html>
