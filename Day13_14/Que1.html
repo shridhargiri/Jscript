@@ -1,0 +1,22 @@
+<html>
+    <head><title>Que 1: Digital Clock</title>
+    <link rel="stylesheet" href="css/que1.css">
+    </head>
+    <body onLoad="timeFunc()">
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <div class="txt">Current Time:</div>
+                <div class="clock" id="time"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function timeFunc(){
+        var dt = new Date();
+        document.getElementById("time").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+        setTimeout(timeFunc, 1000);
+    }
+    </script>
+    </body>
+</html>

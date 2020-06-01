@@ -1,0 +1,21 @@
+<html>
+    <head><title>Que 2: Display height and width</title>
+    <link rel="stylesheet" href="css/que2.css">
+    </head>
+    <body onLoad="dispDimen()">
+        <div class="disp">Screen height: </div>
+        <div class="disp" id="height"></div><br/>
+        <div class="disp">Screen width: </div>
+        <div class="disp" id="width"></div>
+        <script>
+            function dispDimen(){
+                var ht = screen.height;
+                var wt = screen.width;
+
+                document.getElementById("height").innerHTML = ht;
+                document.getElementById("width").innerHTML = wt;
+            }
+        </script>
+    </body>
+</html>
+        

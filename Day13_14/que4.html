@@ -1,0 +1,35 @@
+<html>
+    <head><title>Que 4: Cookies</title>
+    <link rel="stylesheet" href="css/que2.css">
+    </head>
+    <body>
+        Enter your name:<input type = "text" id="data"></input><br/>
+        <button type="button" onclick="crCookie()">Create cookie</button>
+        <button type="button" onclick="delCookie()">Delete cookie</button>
+        <button type="button" onclick="dispCookie()">Display cookie</button><br/>
+        <div id="disp"></div>
+        <script>
+        function crCookie(){
+            var name = document.getElementById("data").value;
+            name = "name:" + name + ";" + "path=/;";
+            document.cookie= name;
+            alert("Cookie created!");
+        }
+        function delCookie(){
+            var name = document.getElementById("data").value;
+            name = "name:" + name + ";" + "expires=Thu, 01 Jan 1970 00:00:00 UTC;" + "path=/;";
+            document.cookie = name;
+            alert("Cookie deleted!");
+        }
+        function dispCookie(){
+            var cookie = document.cookie;
+            if(cookie == ""){
+                document.getElementById("disp").innerHTML = "No cookie data found";
+            }
+            else{
+                document.getElementById("disp").innerHTML = cookie;
+            }
+        }
+        </script>
+    </body>
+</html>
