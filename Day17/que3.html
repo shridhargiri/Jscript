@@ -1,0 +1,19 @@
+<html>
+    <head><title>Question 3: Border on text</title>
+    <script src="../../../../JQUERY/jquery-3.5.1.js"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                $("h1").css("color","#0000ff");
+                $("h1").mouseenter(function(){
+                    $(this).css("text-shadow","2px 2px #ff0000");
+                });
+                $("h1").mouseleave(function(){
+                    $(this).css("text-shadow","");
+                });
+            });
+        </script>
+        <h1>Shridhar Giri</h1>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <head><title>Question 4: On loosing focus, textbox color tiurns grey</title>
+    <script src="../../../../JQUERY/jquery-3.5.1.js"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                $("input").blur(function(){
+                    $(this).css("background-color","grey");
+                });
+            });
+        </script>
+        <input type="text"></input>
+    </body>
+</html>
