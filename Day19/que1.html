@@ -1,0 +1,21 @@
+<html>
+    <head><title>Question 1: Copy text</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{text-align: center;}
+    </style>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    var txt = $("#box1").val();
+                    $("#box2").val(txt);
+                })
+            });
+        </script>
+        <label>Source: </label><input type="text" id="box1"></input>
+        <label>Destination: </label><input type="text" id="box2"></input><br/>
+        <button type="button">Click to copy text</button>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head><title>Question 2: Border on Image</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{text-align: center;}
+        img{border-style: groove; border-width: 5px;}
+    </style>
+    </head>
+    <body>
+        <script>
+             $(document).ready(function(){
+                 $("img").mouseenter(function(){
+                     $(this).css("borderStyle","none");
+                 });
+                 $("img").mouseleave(function(){
+                     $(this).css("borderStyle","groove");
+                 });
+             });
+        </script>
+        <img src="img/img1.jpg"></img>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head><title>Question 4: Remove &lt;p&gt; tag</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{text-align: center;}
+        ul{text-align: left;}
+    </style>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                $("input.color").click(function(){
+                    var color = document.getElementsByClassName("color");
+                    for(let i = 0 ; i < color.length ; i++){
+                        if(color[i].checked)
+                        {   
+                            $("#txt").css("color",color[i].value);
+                        }
+                    }
+                });
+            });
+        </script>
+        <input type="radio" name="colors" class="color" value="green">Green</input>
+        <input type="radio" name="colors" class="color" value="blue">Blue</input>
+        <input type="radio" name="colors" class="color" value="yellow">yellow</input>
+        <input type="radio" name="colors" class="color" value="red">Red</input>
+        <input type="radio" name="colors" class="color" value="orange">Orange</input>
+        <br/><br/>
+        <input type="text" id="txt"></input>
+    </body>
+</html> 

@@ -1,0 +1,33 @@
+<html>
+    <head><title>Question 2: Border on Image</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{text-align: center;}
+        ul{text-align: left;}
+    </style>
+    </head>
+    <body>
+        <script>
+             $(document).ready(function(){
+                $("input.fruit").click(function(){
+                    var fr = document.getElementsByClassName("fruit");
+                    for(let i = 0 ; i < fr.length ; i++){
+                        if(fr[i].checked)
+                        {
+                            $("ul").append("<li>"+fr[i].value+"</li>");
+                        }
+                    }
+                });
+            });
+        </script>
+        <input type="radio" name="fruits" class="fruit" value="Mango">Mango</input>
+        <input type="radio" name="fruits" class="fruit" value="Banana">Banana</input>
+        <input type="radio" name="fruits" class="fruit" value="Apple">Apple</input>
+        <input type="radio" name="fruits" class="fruit" value="Apricots">Apricots</input>
+        <input type="radio" name="fruits" class="fruit" value="Avocados">Avocados</input>
+        <br/><br/>
+        <ul>
+            <li><strong>FRUITS:</strong></li><br/>
+        </ul>
+    </body>
+</html>
